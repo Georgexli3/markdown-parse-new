@@ -36,6 +36,6 @@ public class MarkdownParseTest {
         if(content.length() == 0){
             assertEquals(null,null);
         }
-        //assertEquals(null,MarkdownParse.getLinks(content));
+        //assertEquals(null,MarkdownParse.getLinks(content)); SOUR
     }
 }
