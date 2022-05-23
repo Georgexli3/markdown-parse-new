@@ -38,4 +38,33 @@ public class MarkdownParseTest {
         }
         //assertEquals(null,MarkdownParse.getLinks(content)); SOUR
     }
+
+    @Test
+    public void testSnippet1() throws IOException{
+        ArrayList<String> expectedList = new ArrayList<String>();
+        expectedList.add("url.com");
+        expectedList.add("google.com");
+        expectedList.add("google.com");
+        expectedList.add("ucsd.edu");
+        assertEquals(expectedList,MarkdownParse.getLinksNew("labreport4snippet1.md"));
+    }
+
+    @Test
+    public void testSnippet2() throws IOException{
+        ArrayList<String> expectedList = new ArrayList<String>();
+        expectedList.add("a.com");
+        expectedList.add("b.com");
+        expectedList.add("example.com");
+        assertEquals(expectedList,MarkdownParse.getLinksNew("labreport4snippet2.md"));
+    }
+
+    @Test
+    public void testSnippet3() throws IOException{
+        ArrayList<String> expectedList = new ArrayList<String>();
+        expectedList.add("https://www.twitter.com");
+        expectedList.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+        expectedList.add("github.com");
+        expectedList.add("https://cse.ucsd.edu/");
+        assertEquals(expectedList,MarkdownParse.getLinksNew("labreport4snippet3.md"));
+    }
 }
